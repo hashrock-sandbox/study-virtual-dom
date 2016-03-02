@@ -22,7 +22,7 @@ virtual-dom click counter sample
 
  * サイズの件は、react.js（非圧縮・コメント山盛り）がbundle.jsにインクルードされているためだった。
  * ので、uglifyfyの導入で解決できた。大体1/3くらいのサイズになる。
- * 'NODE_ENV=production browserify -g uglifyify -t [ babelify --presets [ react ] ] main.jsx -o bundle.min.js'
+ * `NODE_ENV=production browserify -g uglifyify -t [ babelify --presets [ react ] ] main.jsx -o bundle.min.js`
  * サイズを気にするなら、下記の点をチェック
   * sourcemap出しっぱなしになってない？
   * NODE_ENV=productionでデバッグ用のコードが削減されるらしい。
